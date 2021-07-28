@@ -23,7 +23,7 @@ import static com.billy.android.loading.Gloading.STATUS_LOADING;
  */
 public class SpecialAdapter implements Gloading.Adapter {
     @Override
-    public View getView(Gloading.Holder holder, View convertView, int status) {
+    public View getView(Gloading.Holder holder, View convertView, int status, Object data) {
         if (status == STATUS_LOADING) {
             //only loading UI special
             SpecialLoadingStatusView view;
@@ -47,6 +47,7 @@ public class SpecialAdapter implements Gloading.Adapter {
         }
         return convertView;
     }
+
 
     /**
      * special loading status view for only one activity usage
